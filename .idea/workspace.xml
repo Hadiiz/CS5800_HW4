@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cfa6c8b6-4a12-463c-9c33-2bd4ef0cd7f4" name="Changes" comment="Question 2">
-      <change afterPath="$PROJECT_DIR$/src/Question2/MacronutrientAbstractFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Question2/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Question2/CarbsFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Question2/CarbsFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Question2/FatsFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Question2/FatsFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Question2/Macronutrients.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Question2/Macronutrient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Question2/ProteinFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Question2/ProteinFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Question2/MacronutrientAbstractFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Question2/MacronutrientAbstractFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +64,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710369419536</updated>
-      <workItem from="1710369420629" duration="19437000" />
+      <workItem from="1710369420629" duration="20885000" />
     </task>
     <task id="LOCAL-00001" summary="Question 1">
       <option name="closed" value="true" />
@@ -87,7 +82,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710535769342</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Question 2">
+      <option name="closed" value="true" />
+      <created>1710544849729</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1710544849730</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
