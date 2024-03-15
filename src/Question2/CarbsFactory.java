@@ -1,39 +1,40 @@
 package Question2;
 
+//FATS INTERFACE
 interface Carbs {
-    void getFood();
+    String getFood();
 }
 
-// Implementing Carbs interface in various classes
+// IMPLEMENTING CARBS INTERFACE
 class Cheese implements Carbs {
     @Override
-    public void getFood(){
-        System.out.println("Cheese");
+    public String getFood(){
+        return "Cheese";
     }
 }
 
 class Bread implements Carbs {
     @Override
-    public void getFood(){
-        System.out.println("Bread");
+    public String getFood(){
+        return "Bread";
     }
 }
 
 class Lentils implements Carbs {
     @Override
-    public void getFood(){
-        System.out.println("Lentils");
+    public String getFood(){
+        return "Lentils";
     }
 }
 
 class Pistachio implements Carbs {
     @Override
-    public void getFood(){
-        System.out.println("Pistachio");
+    public String getFood(){
+        return "Pistachio";
     }
 }
 
-// CarbsFactory implementing the Factory Design Pattern
+// CARBSFACTORY IMPLEMENTING THE FACTORY DESIGN PATTERN
 public class CarbsFactory{
     private static CarbsFactory instance;
 
@@ -46,7 +47,7 @@ public class CarbsFactory{
         return instance;
     }
 
-    // Factory method for creating Carbs objects
+    // FACTORY METHOD FOR CREATING CARBS OBJECT
     public Carbs createCarbs(String diet){
         if(diet.equals("no restriction")) {
             int random = (int) (Math.random() * 4);
@@ -73,16 +74,16 @@ public class CarbsFactory{
                 case 2: return new Cheese();
             }
         }
-        return null; // Default return in case of no match
+        return null;
     }
 
-    // Method to display food, separating creation and action logic
-    public void getFood(String diet) {
+    // DISPLAY FOOD
+    public String getFood(String diet) {
         Carbs carbs = createCarbs(diet);
         if (carbs != null) {
-            carbs.getFood();
+            return carbs.getFood();
         } else {
-            System.out.println("Diet not supported");
+            return "Diet not supported for carbs!";
         }
     }
 }

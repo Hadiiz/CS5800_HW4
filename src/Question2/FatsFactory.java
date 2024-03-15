@@ -1,39 +1,39 @@
 package Question2;
-
+// FATS INTERFACE
 interface Fats {
-    void getFood();
+    String getFood();
 }
 
-// Implementing Fats interface in various classes
+// IMPLEMENTING FATS INTERFACE
 class Avocado implements Fats {
     @Override
-    public void getFood(){
-        System.out.println("Avocado");
+    public String getFood(){
+        return "Avocado";
     }
 }
 
 class SourCream implements Fats {
     @Override
-    public void getFood(){
-        System.out.println("Sour Cream");
+    public String getFood(){
+        return "Sour Cream";
     }
 }
 
 class Tuna implements Fats {
     @Override
-    public void getFood(){
-        System.out.println("Tuna");
+    public String getFood(){
+        return "Tuna";
     }
 }
 
 class Peanuts implements Fats {
     @Override
-    public void getFood(){
-        System.out.println("Peanuts");
+    public String getFood(){
+        return "Peanuts";
     }
 }
 
-// FatsFactory implementing the Factory Design Pattern
+// FATSFACTORY IMPLEMENTING THE FACTORY DESIGN PATTERN
 public class FatsFactory {
     private static FatsFactory instance;
 
@@ -46,7 +46,7 @@ public class FatsFactory {
         return instance;
     }
 
-    // Factory method for creating Fats objects
+    // FACTORY METHOD FOR CREATING FATS OBJECTS
     public Fats createFats(String diet){
         if("no restriction".equals(diet)) {
             int random = (int) (Math.random() * 4);
@@ -77,16 +77,16 @@ public class FatsFactory {
                 case 2: return new Tuna();
             }
         }
-        return null; // Default return in case of no match
+        return null;
     }
 
-    // Method to display food, separating creation and action logic
-    public void getFood(String diet) {
+    // DISPLAY FOOD
+    public String getFood(String diet) {
         Fats fats = createFats(diet);
         if (fats != null) {
-            fats.getFood();
+            return fats.getFood();
         } else {
-            System.out.println("Diet not supported");
+            return "Diet not supported";
         }
     }
 }

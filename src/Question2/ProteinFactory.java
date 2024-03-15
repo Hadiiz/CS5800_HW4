@@ -1,34 +1,36 @@
 package Question2;
 
+// PROTEIN INTERFACE
 interface Protein {
-    void getFood();
+    String getFood();
 }
 
+// IMPLEMENTING PROTEIN INTERFACE
 class Fish implements Protein {
     @Override
-    public void getFood(){
-        System.out.println("Fish");
+    public String getFood(){
+        return "Fish";
     }
 }
 
 class Chicken implements Protein {
     @Override
-    public void getFood(){
-        System.out.println("Chicken");
+    public String getFood(){
+        return "Chicken";
     }
 }
 
 class Beef implements Protein {
     @Override
-    public void getFood(){
-        System.out.println("Beef");
+    public String getFood(){
+        return "Beef";
     }
 }
 
 class Tofu implements Protein {
     @Override
-    public void getFood(){
-        System.out.println("Tofu");
+    public String getFood(){
+        return "Tofu";
     }
 }
 
@@ -44,7 +46,7 @@ public class ProteinFactory {
         return instance;
     }
 
-    // Factory method for creating Protein objects
+    // FACTORY METHOD FOR CREATING PROTEIN OBJECTS
     public Protein createProtein(String diet) {
         if (diet.equals("no restriction") || diet.equals("nut allergy")) {
             int random = (int) (Math.random() * 4);
@@ -64,16 +66,16 @@ public class ProteinFactory {
         } else if (diet.equals("vegan")) {
             return new Tofu();
         }
-        return null; // Default return in case of no match
+        return null;
     }
 
-    // Method to display food, separating creation and action logic
-    public void getFood(String diet) {
+    // DISPLAY FOOD
+    public String getFood(String diet) {
         Protein protein = createProtein(diet);
         if (protein != null) {
-            protein.getFood();
+            return protein.getFood();
         } else {
-            System.out.println("Diet not supported");
+            return "Diet not supported";
         }
     }
 }
